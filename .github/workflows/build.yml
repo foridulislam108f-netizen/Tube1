@@ -19,7 +19,7 @@ jobs:
       - name: Unzip project
         run: |
           mkdir -p _src
-          unzip -q -o Tube.zip -d _src
+          unzip -q -o MyTube.zip -d _src
           GRADLEW=$(find _src -name gradlew -not -path '*/.git/*' | head -1)
           if [ -z "$GRADLEW" ]; then echo "gradlew not found in zip"; exit 1; fi
           echo "PROJECT_DIR=$(dirname "$GRADLEW")" >> "$GITHUB_ENV"
